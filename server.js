@@ -14,6 +14,9 @@ mongoose.connect('mongodb://localhost/todo', {
   console.error(error)
 })
 
+app.get('/', (req, res)=>{
+  res.send('Hello world')
+})
 // Define API endpoints
 app.get('/api/todos', (req, res) => {
   // TODO: Implement getting all todos
