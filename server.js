@@ -1,18 +1,17 @@
 // server.js
 const express = require('express')
-const mongoose = require('mongoose')
 
 const app = express()
 
 // Connect to MongoDB database
-mongoose.connect('mongodb://localhost/todo', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('Connected to MongoDB!')
-}).catch((error) => {
-  console.error(error)
-})
+// mongoose.connect('mongodb://localhost/todo', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }).then(() => {
+//   console.log('Connected to MongoDB!')
+// }).catch((error) => {
+//   console.error(error)
+// })
 
 app.get('/', (req, res)=>{
   res.send('Hello world')
